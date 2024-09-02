@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-nav {
+    background-color: transparent;
+    border: 1px solid #4B4B51;
+   padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .custom-nav:hover {
+    border-color: rgba(255, 255, 255, 1);
+  }
+  
+  .swiper-button-prev.custom-nav,
+  .swiper-button-next.custom-nav {
+    position: relative;
+    z-index: 10;
+  }
+
+.swiper-pagination-unique-bullet {
+    width: 5px;
+    height: 5px;
+    background-color: #5D55BD;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-pagination-unique-bullet-active {
+    background-color: #5D55BD;
+    opacity: 1;
+    transform: scale(1.2); /* Enlarges the active bullet */
+  }
+  
+  
