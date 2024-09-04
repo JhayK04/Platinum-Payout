@@ -9,6 +9,7 @@ import hero from "../Assets/Frame 1353.png";
 import hero1 from "../Assets/Frame 1353 (1).png";
 import hero2 from "../Assets/Frame 1353 (2).png";
 import crypto from "../Assets/cryptocurrency.png";
+import platinums from "../Assets/Frame 57 1.png";
 import { RiVipCrownFill } from "react-icons/ri";
 import { FaDice } from "react-icons/fa6";
 import { FaRedhat } from "react-icons/fa";
@@ -435,7 +436,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -450,7 +451,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -465,7 +466,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -480,7 +481,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -495,7 +496,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -510,7 +511,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -525,7 +526,7 @@ const Platinum = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
                     <button className="bg-white text-[25px] text-[#EC921D] rounded-full h-11 w-11">
-                      ▶️
+                      ▶
                     </button>
                   </div>
                 </div>
@@ -635,73 +636,151 @@ const Platinum = () => {
             </div>
           </div>
         </div>
-        <div className="px-6 flex flex-col gap-5">
-          <h1 className="text-white text-[24px] font-medium">Fair and Provable winners</h1>
+        <div className="px-6 flex flex-col gap-10">
+          <h1 className="text-white text-[24px] font-medium">
+            Fair and Provable winners
+          </h1>
           <div className="flex items-center">
-          <div >
-            <button className="h-[80px] text-white text-[20px] font-medium bg-transparent  w-[140px]">All Bets</button>
-          </div>
-          <div>
-            <button className="h-[70px] text-white text-[20px] font-medium border-b-[1px] border-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] rounded-[3px]  w-[140px]">High Rollers</button>
-          </div>
+            <div>
+              <button className="h-[80px] text-white text-[20px] font-medium bg-transparent  w-[140px]">
+                All Bets
+              </button>
+            </div>
+            <div>
+              <button className="h-[70px] text-white text-[20px] font-medium border-b-[1px] border-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] rounded-[3px]  w-[140px]">
+                High Rollers
+              </button>
+            </div>
           </div>
 
           <div>
-          <div className="w-full text-white">
-  <table className="w-full text-white border-separate border-spacing-0">
-    <thead className="bg-gray-800">
-      <tr className="text-center">
-        <th className="p-2">Games</th>
-        <th className="p-2">Names</th>
-        <th className="p-2">Payout</th>
-        <th className="p-2">Time</th>
-        <th className="p-2">Multiplier</th>
-      </tr>
-    </thead>
-    <tbody className="">
-      <tr className="bg-blue-500 ">
-        <td className="p-2 rounded-l-full">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2 rounded-r-full">mango</td>
-      </tr> <br />
-      <tr className="bg-green-500 mb-2">
-        <td className="p-2 rounded-l-full">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2 rounded-r-full">mango</td>
-      </tr>
-      <tr className="bg-red-500 mb-2">
-        <td className="p-2 rounded-l-full">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2 rounded-r-full">mango</td>
-      </tr>
-      <tr className="bg-yellow-500 mb-2">
-        <td className="p-2 rounded-l-full">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2 rounded-r-full">mango</td>
-      </tr>
-      <tr className="bg-purple-500 mb-2">
-        <td className="p-2 rounded-l-full">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2">mango</td>
-        <td className="p-2 rounded-r-full">mango</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <div className="w-full text-white">
+              <table className="w-full text-white ">
+                <thead className="">
+                  <tr className="">
+                    <th className="p-4 text-left rounded-l-full">Games</th>
+                    <th className="p-2">Names</th>
+                    <th className="p-2">Payouts</th>
+                    <th className="p-2">Time</th>
+                    <th className="p-4 text-right rounded-r-[50px]">
+                      Multiplier
+                    </th>
+                  </tr>
+                </thead>
+                <br />
+                <tbody className="">
+                  <tr className="bg-[#434172] ">
+                    <td className="p-4 text-left  rounded-l-full">Jackpot</td>
+                    <td className="p-2 text-center">Jane Cooper</td>
+                    <td className="p-2 text-center">0.0000048937</td>
+                    <td className="p-2 text-center">16:45</td>
+                    <td className="p-4 text-right rounded-r-[50px]">1.998x</td>
+                  </tr>{" "}
+                  <br />
+                  <tr className=" mb-2">
+                    <td className="p-4 text-left  rounded-l-full">Jackpot</td>
+                    <td className="p-2 text-center">Wade Warren</td>
+                    <td className="p-2 text-center">0.0000048937</td>
+                    <td className="p-2 text-center">16:45</td>
+                    <td className="p-4 text-right rounded-r-[50px]">1.998x</td>
+                  </tr>{" "}
+                  <br />
+                  <tr className="bg-[#434172] mb-2">
+                    <td className="p-4 text-left  rounded-l-full">Jackpot</td>
+                    <td className="p-2 text-center">Esther Howard</td>
+                    <td className="p-2 text-center">0.0000048937</td>
+                    <td className="p-2 text-center">16:45</td>
+                    <td className="p-4 text-right rounded-r-[50px]">1.998x</td>
+                  </tr>{" "}
+                  <br />
+                  <tr className=" mb-2">
+                    <td className="p-4 text-left  rounded-l-full">Jackpot</td>
+                    <td className="p-2 text-center">Jenny Wilson</td>
+                    <td className="p-2 text-center">0.0000048937</td>
+                    <td className="p-2 text-center">16:45</td>
+                    <td className="p-4 text-right rounded-r-[50px]">1.998x</td>
+                  </tr>{" "}
+                  <br />
+                  <tr className="bg-[#434172] mb-2">
+                    <td className="p-4 text-left  rounded-l-full">Jackpot</td>
+                    <td className="p-2 text-center">Guy Hawkins</td>
+                    <td className="p-2 text-center">0.0000048937</td>
+                    <td className="p-2 text-center">16:45</td>
+                    <td className="p-4 text-right rounded-r-[50px]">1.998x</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
+            <div className="mt-[100px] w-full border-t-[1px] border-gray-500 py-8 justify-center  flex gap-[150px] ">
+              <div className="flex flex-col   gap-7">
+                <div className="">
+                  <img className="w-[400px] " src={platinums} alt="" />
+                </div>
+                <div className="flex px-4  gap-10 text-white">
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <h1>Casino</h1>
+                    </div>
+                    <div className="flex text-[9px] flex-col gap-3">
+                      <h1>Play casino</h1>
+                      <h1>Slot</h1>
+                      <h1>Video Poker</h1>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <h1>Table Games</h1>
+                    </div>
+                    <div className="flex text-[9px] flex-col gap-3">
+                      <h1>Blackjack</h1>
+                      <h1>Roulette</h1>
+                      <h1>Casino Poker</h1>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <h1>Live Casino</h1>
+                    </div>
+                    <div className="flex text-[9px] flex-col gap-3">
+                      <h1>Live Blackjack</h1>
+                      <h1>Live Baccarat</h1>
+                      <h1>Live Roulette</h1>
+                      <h1>All Live Casino Games</h1>
+                      <h1>Developers</h1>
+                      <h1>Support</h1>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <h1>Company</h1>
+                    </div>
+                    <div className="flex text-[9px] flex-col gap-3">
+                      <h1>About Us</h1>
+                      <h1>Affiliate Program</h1>
+                      <h1>FAQs</h1>
+                      <h1>Responsible Gaming</h1>
+                      <h1>Contact us</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="py-3 flex flex-col gap-6   ">
+                <h1 className="text-[28px] flex items-end   font-light uppercase text-white tracking-[px]">
+                  play real money casino games <br />online
+                </h1>
 
-
+                <div>
+                  <h1 className="text-white">
+                  If you’re looking for exciting real money casino action, you’re <br /> in the right place. 
+                  </h1>
+                </div>
+                <div> <button className="w-[124px] h-[45px] flex items-center text-[13px] font-bold justify-center rounded-[40px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md">
+          Join Now
+        </button></div>
+              </div>
+            </div>
           </div>
-         
         </div>
       </div>
 
