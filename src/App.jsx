@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SideNav from "./SIdeNav";
-import Platinum from "./Platinum";
+import SideNav from "./Components/SIdeNav"
+import Platinum from "./Components/Platinum";
 // import OtherPage from "./OtherPage"; // Import other pages if needed
-import TopNav from "./TopNav";
-import Home from "./Home"
+import Home from "./Components/Home"
+import TopNav from "./Components/TopNav"
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
          
           <Routes>
             <Route
-              path="/platinum"
+              path="/"
               element={
                 
                
