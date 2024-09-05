@@ -1,39 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SideNav from "./Components/SIdeNav"
-import Platinum from "./Components/Platinum";
-// import OtherPage from "./OtherPage"; // Import other pages if needed
-import Home from "./Components/Home"
-import TopNav from "./Components/TopNav"
-
+import SideNav from "./Components/SIdeNav";
+import TopNav from "./Components/TopNav";
+import Home from "./Components/Home";
+import SignUp from "./Components/SignUp";
 
 const App = () => {
-  const isPlatinumPage = window.location.pathname === "/platinum";
+  const [content, setContent] = useState(false);
+
+  const handleButtonClick = () => {
+    setContent(!content); // Toggle the content when button is clicked
+  };
 
   return (
     <Router>
       <div className="flex w-full h-screen">
         <SideNav />
-        <div className=" h-screen  overflow-hidden">
-         
+        <div className="h-screen overflow-hidden">
           <Routes>
             <Route
               path="/"
               element={
-                
-               
-                  <div className="">
-                     <TopNav/>
-                    <Home />
-                  </div>
-                
+                <div>
+                  <TopNav onButtonClick={handleButtonClick} />
+                  <SignUp content={content} onClose={handleButtonClick} />
+                  <Home />
+                </div>
               }
             />
-            {/* <Route path="/other-page" element={<OtherPage />} /> */}
           </Routes>
         </div>
       </div>
     </Router>
   );
 };
+
 export default App;
+
