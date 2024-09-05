@@ -24,7 +24,10 @@ import { GiRoundStar } from "react-icons/gi";
 
 const Platinum = () => {
   return (
-    <div className="h-[100vh] overflow-y-scroll bg-gradient-to-r to-[#292551]   from-[#0C0A1D]">
+    <div className="h-[100vh] relative overflow-y-scroll bg-gradient-to-r to-[#292551]   from-[#0C0A1D]">
+ 
+
+     
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
