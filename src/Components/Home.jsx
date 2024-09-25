@@ -41,13 +41,13 @@ const Platinum = () => {
         className="mb-6 "
       >
         <SwiperSlide className="p-6">
-          <img className="w-full md:h-[426px]" src={hero} alt="Hero Image 1" />
+          <img className="w-full object-cover md:h-[426px]" src={hero} alt="Hero Image 1" />
         </SwiperSlide>
         <SwiperSlide className="p-6">
-          <img className="w-full md:h-[426px]" src={hero1} alt="Hero Image 2" />
+          <img className="w-full object-cover md:h-[426px]" src={hero1} alt="Hero Image 2" />
         </SwiperSlide>
         <SwiperSlide className="p-6">
-          <img className="w-full md:h-[426px]" src={hero2} alt="Hero Image 3" />
+          <img className="w-full object-cover md:h-[426px]" src={hero2} alt="Hero Image 3" />
         </SwiperSlide>
       </Swiper>
 
