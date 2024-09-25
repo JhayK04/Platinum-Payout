@@ -88,7 +88,7 @@ const TopNav = () => {
                <p>$0,00</p>
               </Link>
               <Link
-                to="/signup"
+                to="/deposit"
                 className="w-[94px] h-[45px] flex items-center text-[13px] justify-center rounded-[40px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
               >
               Deposit

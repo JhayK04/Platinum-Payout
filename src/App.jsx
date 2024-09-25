@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
 import PlatinumFunding from "./Components/PlatinumFunding";
 import LogIn from "./Components/LogIn";
+import Deposit from "./Components/Deposit";
 
 const App = () => {
   const [content, setContent] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
             />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
+            <Route path="/deposit" element={<Deposit />} />
             <Route
               path="/platinumfunding"
               element={
