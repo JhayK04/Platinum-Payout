@@ -47,6 +47,25 @@
     outline: none;
     position: relative;
     z-index: 10;
+
+    
+    /* Create gradient border */
+    border: 1px solid transparent;
+    background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .input{
+    width:300px;
+    border-radius: 9999px;
+    background-color: #231F4A;
+    padding: 16px;
+    outline: none;
+    position: relative;
+    z-index: 10;
+
     
     /* Create gradient border */
     border: 1px solid transparent;
@@ -60,5 +79,36 @@
   .gradient-border-input::placeholder {
     color: #ffffff50; /* Adjust color and opacity as needed */
   }
-  
-  
+  .hide-scrollbar {
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Edge */
+  }
+
+  .inputs{
+    width:300px;
+    border-radius: 9999px;
+    background-color: #231F4A;
+    padding: 8px;
+    outline: none;
+    position: relative;
+    border: 1px solid transparent;
+    background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .name{
+    border-radius: 9999px;
+    background-color: #231F4A;
+    padding: 16px;
+    outline: none;
+    position: relative;
+    border: 1px solid transparent;
+    background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
