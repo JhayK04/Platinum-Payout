@@ -1,114 +1,18 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.custom-nav {
-    background-color: transparent;
-    border: 1px solid #4B4B51;
-   padding: 4px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .custom-nav:hover {
-    border-color: rgba(255, 255, 255, 1);
-  }
-  
-  .swiper-button-prev.custom-nav,
-  .swiper-button-next.custom-nav {
-    position: relative;
-    z-index: 10;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-.swiper-pagination-unique-bullet {
-    width: 5px;
-    height: 5px;
-    background-color: #5D55BD;
-    border-radius: 50%;
-    opacity: 0.5;
-    transition: all 0.3s ease;
-  }
-  
-  .swiper-pagination-unique-bullet-active {
-    background-color: #5D55BD;
-    opacity: 1;
-    transform: scale(1.2); /* Enlarges the active bullet */
-  }
-
-  .gradient-border-input {
-    width: 381px;
-    height: 49px;
-    border-radius: 9999px;
-    background-color: #231F4A;
-    padding: 16px;
-    outline: none;
-    position: relative;
-    z-index: 10;
-
-    
-    /* Create gradient border */
-    border: 1px solid transparent;
-    background-image: linear-gradient(#231F4A, #231F4A), 
-    linear-gradient(to right, #DE680A, #FEC636);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  .input{
-    width:300px;
-    border-radius: 9999px;
-    background-color: #231F4A;
-    padding: 16px;
-    outline: none;
-    position: relative;
-    z-index: 10;
-
-    
-    /* Create gradient border */
-    border: 1px solid transparent;
-    background-image: linear-gradient(#231F4A, #231F4A), 
-    linear-gradient(to right, #DE680A, #FEC636);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-  
-  /* Placeholder styling */
-  .gradient-border-input::placeholder {
-    color: #ffffff50; /* Adjust color and opacity as needed */
-  }
-  .hide-scrollbar {
-    scrollbar-width: none; /* For Firefox */
-  }
-
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, Edge */
-  }
-
-  .inputs{
-    width:300px;
-    border-radius: 9999px;
-    background-color: #231F4A;
-    padding: 8px;
-    outline: none;
-    position: relative;
-    border: 1px solid transparent;
-    background-image: linear-gradient(#231F4A, #231F4A), 
-    linear-gradient(to right, #DE680A, #FEC636);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-  .name{
-    border-radius: 9999px;
-    background-color: #231F4A;
-    padding: 16px;
-    outline: none;
-    position: relative;
-    border: 1px solid transparent;
-    background-image: linear-gradient(#231F4A, #231F4A), 
-    linear-gradient(to right, #DE680A, #FEC636);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

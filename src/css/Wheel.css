@@ -1,0 +1,109 @@
+/* Wheel.css */
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* For big screens */
+.wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.marker {
+  position: absolute;
+  width: 50px;
+  top: 10px;
+}
+
+.button {
+  position: absolute;
+  bottom: -100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.display {
+  position: absolute;
+  bottom: -150px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Style for balance, bet input, and prizes */
+.info-section {
+  margin-left: 20px;
+  color: white;
+}
+
+.balance, .bet, .prizes {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+}
+
+input[type="number"] {
+  padding: 5px;
+  font-size: 16px;
+  width: 60px;
+}
+
+.prizes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prizes ul li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design for mobile screens */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .wheel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .button {
+    bottom: -50px;
+  }
+
+  .info-section {
+    margin: 0 0 20px 0;
+  }
+
+  .balance, .bet, .prizes {
+    text-align: center;
+  }
+
+  .prizes ul li {
+    font-size: 16px;
+  }
+
+  .display {
+    bottom: -100px;
+  }
+}
