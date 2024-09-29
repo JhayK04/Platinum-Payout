@@ -113,11 +113,218 @@
     background-clip: padding-box, border-box;
   }
 
+  .clip-rounded-edge {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  
+
   .deposit{
     width: 400px;
     border-radius: 9999px;
     background-color: #231F4A;
     padding: 16px;
+    outline: none;
+    position: relative;
+    border: 1px solid transparent;
+    background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .fullname{
+ 
+    border-radius: 9999px;
+    background-color: #231F4A;
+    padding: 10px;
+    outline: none;
+    position: relative;
+    border: 1px solid transparent;
+    background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+
+  /* Override the react-phone-input-2 default styles */
+.react-tel-input {
+  width: 100% !important;
+}
+
+.react-tel-input .form-control {
+  width: 400px !important;
+  background-color: #1a1a2e !important;  /* Match background color */
+  color: white !important;               /* Match text color */
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+  border-radius: 9999px !important;       /* Full rounded corners */
+  padding: 20px 65px !important;            /* Tailwind 'p-3' */
+}
+
+.react-tel-input .flag-dropdown {
+  background-color: #1a1a2e !important;
+  padding: 10px !important;
+
+  border: 1px solid transparent !important;
+  background-image: 
+    linear-gradient(to right, #DE680A, #FEC636) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+
+  border-radius: 9999px 0 0 9999px !important; /* Rounded left only */
+}
+/* .react-tel-input .flag-dropdown:hover,
+.react-tel-input .flag-dropdown:focus,
+.react-tel-input .flag-dropdown:active {
+  background-color: #1a1a2e !important;
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#231F4A, #231F4A),
+    linear-gradient(to right, #DE680A, #FEC636) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  cursor: pointer !important;
+} */
+
+.styled-date-picker-wrapper {
+  width: 400px;
+}
+
+.styled-date-picker {
+  width: 100%;
+  background-color: #1a1a2e !important;
+  color: white !important;
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#231F4A, #231F4A),
+    linear-gradient(to right, #DE680A, #FEC636) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border-radius: 9999px !important;
+  padding: 10px 60px !important;
+  font-size: 16px;
+}
+
+.date-picker-container {
+  position: relative;
+  width: 400px;
+}
+
+.calendar-icon {
+  width: 50px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: 1px solid transparent;
+  background-image: 
+  linear-gradient(to right, #DE680A, #FEC636);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+height: 100%;
+  z-index: 1;
+}
+
+.styled-date-picker-wrapper {
+  width: 100%;
+  padding: 10px;
+}
+
+.styled-date-picker::placeholder {
+  color: #6c757d;
+}
+
+.styled-date-picker:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(222, 104, 10, 0.5);
+}
+
+.react-datepicker {
+  background-color: #1a1a2e !important;
+  border: 1px solid #DE680A !important;
+}
+
+.react-datepicker__header {
+  background-color: #231F4A !important;
+  border-bottom: 1px solid #DE680A !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__month-text,
+.react-datepicker__year-text {
+  color: white !important;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__year-text:hover {
+  background-color: #DE680A !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #FEC636 !important;
+  color: #1a1a2e !important;
+}
+
+.react-datepicker__year-dropdown,
+.react-datepicker__month-dropdown {
+  background-color: #1a1a2e !important;
+  border: 1px solid #DE680A !important;
+}
+
+.react-datepicker__year-option:hover,
+.react-datepicker__month-option:hover {
+  background-color: #DE680A !important;
+}
+
+.react-tel-input .country-list .country.highlight,
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country:focus,
+.react-tel-input .country-list .country.active {
+  background-color: #2a2a3e !important;
+}
+
+.react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .selected-flag:active {
+  background-color: transparent !important;
+}
+
+
+
+.react-tel-input .country-list {
+  background-color: #1a1a2e !important;
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#231F4A, #231F4A), 
+    linear-gradient(to right, #DE680A, #FEC636) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+}
+
+.react-tel-input .search {
+  background-color: #1a1a2e !important;
+ border: none !important;
+color:black !important ;
+  padding: 0.5rem;
+}
+
+
+
+  .email{
+    width: 400px;
+    border-radius: 9999px;
+    background-color: #231F4A;
+    padding: 10px;
     outline: none;
     position: relative;
     border: 1px solid transparent;

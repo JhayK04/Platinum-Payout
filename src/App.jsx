@@ -7,6 +7,8 @@ import SignUp from "./Components/SignUp";
 import PlatinumFunding from "./Components/PlatinumFunding";
 import LogIn from "./Components/LogIn";
 import Deposit from "./Components/Deposit";
+import Account from "./Components/Account";
+import ProfileLayout from "./Components/ProfileLayout";
 
 const App = () => {
   const [content, setContent] = useState(false);
@@ -38,6 +40,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/deposit" element={<Deposit />} />
+
             <Route
               path="/platinumfunding"
               element={
@@ -47,9 +50,23 @@ const App = () => {
                 </div>
               }
             />
+           
+            
+                  <Route path="/profile/*"  element={
+                    <div>
+                      <TopNav />
+                      <ProfileLayout/>
+                </div>
+              }
+            />
+           
+          {/* <Route path="account" element={<Account />} />
+          <Route path="documents" element={<Documents />} />
+          <Route path="transaction" element={<Transaction />} /> */}
           </Routes>
         </div>
       </div>
+
     </Router>
   );
 };

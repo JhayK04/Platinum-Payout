@@ -50,6 +50,13 @@ const TopNav = () => {
     };
   }, [location.state, navigate]);
 
+  // Close the dropdown on route change
+  useEffect(() => {
+    if (dropdownOpen) {
+      setDropdownOpen(false);
+    }
+  }, [location]);
+
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
@@ -76,138 +83,141 @@ const TopNav = () => {
         </div>
 
         <div className="flex items-center gap-5">
-        {user ? (
-  <div className="relative">
-    <div className="flex items-center gap-3">
-    <div className="flex gap-3">
+          {user ? (
+            <div className="relative">
+              <div className="flex items-center gap-3">
+                <div className="flex gap-3">
+                  <Link
+                    to="/login"
+                    className="w-[94px] h-[45px] flex items-center gap-2 text-[13px] justify-center rounded-[40px] border border-white text-white  py-[13px] bg-[#25214B] backdrop-blur-md"
+                  >
+                    <GiTwoCoins className="text-[#E88717]" />
+                    <p>$0,00</p>
+                  </Link>
+                  <Link
+                    to="/deposit"
+                    className="w-[94px] h-[45px] flex items-center text-[13px] justify-center rounded-[40px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
+                  >
+                    Deposit
+                  </Link>
+                </div>
+                <button onClick={toggleDropdown} className="text-white transition-colors">
+                  <img src={tola} alt="" />
+                </button>
+              </div>
+              <div
+                className={`absolute right-0 mt-2 w-[325px] bg-[#434172] rounded shadow-lg z-50 transition-all duration-500 ease-in-out ${
+                  dropdownOpen ? "opacity-100 max-h-screen" : "opacity-0 max-h-0"
+                }`}
+                style={{ overflow: "hidden" }}
+              >
+                <nav className="flex flex-col">
+                  {user && (
+                    <span className="text-[17px] px-4 py-2 text-black dark:text-white">
+                      <div className="flex items-center gap-2 border-b-[1px] border-[#4E4D78] py-2  text-[13px]">
+                        <img src={tola} alt="" />
+                        <span className="text-[#E88717]"> {user.email} </span>
+                      </div>
+                    </span>
+                  )}
+                  {user ? (
+                    <div className="flex flex-col px-5 gap-6">
+                      <Link to="/profile/account" className="gap-4 flex items-center">
+                        <RiAccountCircleLine size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Account</p>
+                      </Link>
+                      <Link to="/profile/referral" className="gap-4 flex items-center">
+                        <FaQuestion size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Referrals</p>
+                      </Link>
+                      <Link to="/profile/transaction" className="gap-4 flex items-center">
+                        <PiHandDeposit size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Deposits</p>
+                      </Link>
+                      <Link to="/profile/password" className="gap-4 flex items-center">
+                        <GiPadlock size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Change Password</p>
+                      </Link>
+                      <Link to="/profile/documents" className="gap-4 flex items-center">
+                        <IoDocumentTextOutline size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Documents</p>
+                      </Link>
+                      <Link to="/profile/account" className="gap-4 flex items-center">
+                        <BiSupport size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Live Support</p>
+                      </Link>
+                      <Link to="/profile/withdrawal" className="gap-4 flex items-center">
+                        <BiMoneyWithdraw size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Withdraw</p>
+                      </Link>
+                      <Link to="/profile/account" className="gap-4 flex items-center">
+                        <GoHistory size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">History</p>
+                      </Link>
+                      <Link to="/profile/coupons" className="gap-4 flex items-center">
+                        <RiCoupon2Line size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Coupons</p>
+                      </Link>
+                      <Link to="/profile/bonus" className="gap-4 flex items-center">
+                        <BsFillGiftFill size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Bonus</p>
+                      </Link>
+
+                      <Link
+                        to="/"
+                        onClick={handleLogout}
+                        className="text-[16px] flex items-center  border-[#4E4D78] gap-4 border-t-[1px] py-2 "
+                      >
+                        <PiSignOutLight size={30} className="text-[#E88717]" />
+                        <p className="text-[16px] text-white">Logout</p>
+                      </Link>
+                    </div>
+                  ) : (
+                    <>
+                      <Link
+                        to="/login"
+                        className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Login
+                      </Link>
+                      <Link
+                        to="/register"
+                        className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Register
+                      </Link>
+                    </>
+                  )}
+                </nav>
+              </div>
+            </div>
+          ) : (
+            <div className="flex gap-4">
               <Link
                 to="/login"
-                className="w-[94px] h-[45px] flex items-center gap-2 text-[13px] justify-center rounded-[40px] border border-white text-white  py-[13px] bg-[#25214B] backdrop-blur-md"
-              >
-               <GiTwoCoins className="text-[#E88717]"  />
-               <p>$0,00</p>
-              </Link>
-              <Link
-                to="/deposit"
-                className="w-[94px] h-[45px] flex items-center text-[13px] justify-center rounded-[40px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
-              >
-              Deposit
-              </Link>
-              </div> 
-    <button onClick={toggleDropdown} className="text-white transition-colors">
-   <img src={tola} alt="" />
-    </button>
-    </div>
-    <div 
-          className={`absolute right-0 mt-2 w-[325px] bg-[#434172] rounded shadow-lg z-50 transition-all duration-500 ease-in-out ${dropdownOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
-          style={{ overflow: 'hidden' }}
-        >
-          <nav className="flex flex-col">
-            {user && (
-              <span className="text-[17px] px-4 py-2 text-black dark:text-white">
-                <div className="flex items-center gap-2 border-b-[1px] border-[#4E4D78] py-2  text-[13px]">
-                <img src={tola} alt="" />
-             <span className="text-[#E88717]"> {user.email} </span>
-              </div>
-              </span>
-            )}
-            {user ? (
-              <div className="flex flex-col px-5  gap-6">
-              <Link className=" gap-4 flex items-center">
-              <RiAccountCircleLine size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Account</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <FaQuestion  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Referrals</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <PiHandDeposit  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Deposits</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <GiPadlock  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Change Password</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <IoDocumentTextOutline  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Documents</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <BiSupport  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Live Support</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <BiMoneyWithdraw  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Withdraw</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <GoHistory  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">History</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <RiCoupon2Line  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Coupons</p>
-              </Link>
-              <Link className=" gap-4 flex items-center">
-              <BsFillGiftFill  size={30} className="text-[#E88717]" />
-              <p className="text-[16px] text-white">Bonus</p>
-              </Link>
-
-                <Link to="/" onClick={handleLogout} className="text-[16px] flex items-center  border-[#4E4D78] gap-4 border-t-[1px] py-2 ">
-                <PiSignOutLight  size={30} className="text-[#E88717]" />
-                 <p className="text-[16px] text-white">Logout</p> 
-                </Link>
-               
-             
-              </div>
-            ) : (
-              <>
-                <Link to="/login" className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  Login
-                </Link>
-                <Link to="/register" className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  Register
-                </Link>
-              </>
-            )}
-          </nav>
-        </div>
-  </div>
-) 
-
-           
-           : (
-            <>
-              <Link
-                to="/login"
-                className="w-[94px] h-[45px] flex items-center text-[13px] justify-center rounded-[40px] border border-white text-white px-[23px] py-[13px] bg-white/10 backdrop-blur-md"
+                className="w-[94px] h-[45px] flex items-center justify-center rounded-[40px] text-[13px] text-white border border-white bg-[#25214B] backdrop-blur-md"
               >
                 Login
               </Link>
               <Link
-                to="/signup"
-                className="w-[94px] h-[45px] flex items-center text-[13px] justify-center rounded-[40px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
+                to="/register"
+                className="w-[94px] h-[45px] flex items-center justify-center rounded-[40px] text-[13px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
               >
-                Sign Up
+                Register
               </Link>
-            </>
+            </div>
           )}
         </div>
       </div>
 
+      {/* Success message */}
       {success && (
-        <div className="fixed top-[70px] right-[20px] flex items-center justify-center w-[350px] h-[67px] text-white rounded-md shadow-lg z-50">
-          <div className="w-[80px] h-full flex items-center justify-center rounded-l-md bg-[#05581F]">
-            <RiErrorWarningLine size={25} className="text-[#F8B42E]" />
-          </div>
-          <div className="relative w-[270px] flex-1 rounded-r-md h-full flex items-center pl-6 bg-[#008A2E]">
-            {success}
-            <IoMdClose
-              className="cursor-pointer absolute right-3 text-[#F8B42E]"
-              size={20}
-              onClick={handleCloseMessage}
-            />
+        <div className="absolute z-10 bottom-6 left-1/2 transform -translate-x-1/2 w-full max-w-[500px] px-4">
+          <div className="flex items-center justify-between gap-2 bg-green-500 text-white rounded p-4">
+            <p>{success}</p>
+            <button onClick={handleCloseMessage} className="text-white hover:text-gray-200">
+              <IoMdClose size={20} />
+            </button>
           </div>
         </div>
       )}
