@@ -29,41 +29,43 @@ const LogIn = () => {
     });
   };
 
-  // Handle form submission (Login)
- // Handle form submission (Login)
+  
+
  const handleSubmit = async (e) => {
   e.preventDefault();
   setError(""); // Clear error message before login
-
   try {
     const response = await fetch("https://platinum-backend-project.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     });
-
+  
     const data = await response.json();
-    console.log(data)
-
+    console.log("Response Data:", data);
+  
     if (response.ok) {
       setSuccess("Login successful!");
       setError("");
-
-      // Store user information in localStorage
+  
+      // Store user information and token in localStorage
       localStorage.setItem("user", JSON.stringify(formData)); 
-
-      // Navigate to homepage
+      localStorage.setItem("token", data.token); // Assuming token is part of the response
+  
+      console.log("User and token stored:", data.user, data.token);
+  
+ 
       navigate("/", { state: { success: "Login successful!" } });
     } else {
-      // Handle error response
       setError(data.message || "Login failed. Please check your credentials.");
     }
   } catch (error) {
     console.error("Error during login:", error);
     setError("An error occurred while logging in. Please try again.");
   }
+  
 };
 
 
