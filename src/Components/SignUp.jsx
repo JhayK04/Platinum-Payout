@@ -48,51 +48,62 @@ const SignUp = ({ signup, onClose, onButtonClick, onButtonClicks }) => {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    setSuccess(""); // Clear success message before trying again
-  
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match!");
-      return;
-    }
-  
-    try {
-      const response = await fetch("https://platinum-backend-project.onrender.com/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
-  
-      const data = await response.json();
-      console.log(data)
-  
-      if (response.ok) {
-        setSuccess("Registration successful!");
-        setError("");
-  
-        // Store user information in localStorage
-        localStorage.setItem("user", JSON.stringify(formData)); 
-  
-        // Navigate to homepage
-        navigate("/", { state: { success: "Registration successful!" } });
-  
-      } else if (data.message === "User already exists") {
-        setError("User already exists.");
-        setSuccess("");  
-      } else {
-        setError(data.message || "Registration failed.");
-        setSuccess("");  
-      }
-    } catch (error) {
-      console.error("Error during registration:", error);
-      setError("An error occurred while registering. Please try again.");
+  // Handle form submission
+// Handle form submission for signup
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  setSuccess(""); // Clear success message before trying again
+
+  if (formData.password !== formData.confirmPassword) {
+    setError("Passwords do not match!");
+    return;
+  }
+
+  try {
+    const response = await fetch("https://platinum-backend-project.onrender.com/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    if (response.ok) {
+      setSuccess("Registration successful!");
+      setError("");
+
+      // Store the user details from formData directly after signup
+      const userData = {
+        name: formData.name,
+        email: formData.email,
+        country: formData.country,
+      };
+
+      // Store the user information in localStorage based on formData
+      localStorage.setItem("user", JSON.stringify(userData));
+
+      // Navigate to the homepage and pass the user details to the state
+      navigate("/", { state: { success: "Registration successful!", user: userData } });
+
+    } else if (data.message === "User already exists") {
+      setError("User already exists.");
+      setSuccess("");
+    } else {
+      setError(data.message || "Registration failed.");
       setSuccess("");
     }
-  };
+  } catch (error) {
+    console.error("Error during registration:", error);
+    setError("An error occurred while registering. Please try again.");
+    setSuccess("");
+  }
+};
+
+
   
 
  
