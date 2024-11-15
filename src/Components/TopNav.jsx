@@ -181,7 +181,7 @@ const TopNav = () => {
                         Login
                       </Link>
                       <Link
-                        to="/register"
+                        to="/signup"
                         className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         Register
@@ -200,7 +200,7 @@ const TopNav = () => {
                 Login
               </Link>
               <Link
-                to="/register"
+                to="/signup"
                 className="w-[94px] h-[45px] flex items-center justify-center rounded-[40px] text-[13px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
               >
                 Register
