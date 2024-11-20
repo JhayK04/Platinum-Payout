@@ -3,6 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { PiWarningCircle } from "react-icons/pi";
 import { IoMdCheckmark } from "react-icons/io";
 import { useState } from 'react';
+import Footer from './Footer';
 const Withdrawal = () => {
   const [isHovered, setIsHovered] = useState(false);
    const [withdrawTo, setWithdrawTo] = useState("");
@@ -54,7 +55,7 @@ const Withdrawal = () => {
       </div>
       <hr className="" />
       <div>
-        <form className="mt-[4rem]">
+        <form className="mt-[2rem]">
           <div className="flex flex-col gap-4 justify-center max-w-[40rem] mx-auto">
             {/*  Withdraw */}
             <div>
@@ -129,6 +130,7 @@ const Withdrawal = () => {
           </div>
         </form>
       </div>
+      <Footer/>
     </section>
   );
 }

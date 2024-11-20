@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import background from "../Assets/Frame 1395.png";
-import platinum from "../Assets/Frame 57 1.png";
+import background from "../assets/Frame 1395.png";
+import platinum from "../assets/Frame 57 1.png";
 import { IoCloseCircle } from "react-icons/io5";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { RiErrorWarningLine } from "react-icons/ri";

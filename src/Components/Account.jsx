@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import platinums from "../Assets/Frame 57 1.png";
+import platinums from "../assets/Frame 57 1.png";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import DatePicker from 'react-datepicker';

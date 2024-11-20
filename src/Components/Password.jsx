@@ -4,7 +4,7 @@ import { RiErrorWarningLine } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { IoMdCheckmark } from "react-icons/io";
-
+import Footer from "./Footer";
 const Password = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [formData, setFormData] = useState({
@@ -176,6 +176,7 @@ const Password = () => {
           </form>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 }
