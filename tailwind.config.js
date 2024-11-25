@@ -7,7 +7,7 @@ module.exports = {
     extend: {
         backgroundImage: {
         'gradient': 'linear-gradient(to right, #FEC636, #DE680A)',
-         coupons: "url('./../../assets/couponbg.png')",
+         
       },
     },
   },
