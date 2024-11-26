@@ -3,7 +3,7 @@ import { IoChevronBackOutline, IoChevronForward } from "react-icons/io5";
 import { IoHome, IoGift, IoTrophy } from "react-icons/io5";
 import { ImSpades } from "react-icons/im";
 import { NavLink } from "react-router-dom";
-import gif from '../Assets/gif.gif';
+import gif from '../assets/gif.gif';
 
 const SideNav = () => {
   const [open, setOpen] = useState(false);

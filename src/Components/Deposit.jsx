@@ -1,7 +1,7 @@
 import React from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
-import background from "../Assets/Frame 1395.png";
+import background from "../assets/Frame 1395.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";

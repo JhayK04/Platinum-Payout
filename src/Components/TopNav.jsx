@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import platinums from "../Assets/Frame 57 1.png";
+import platinums from "../assets/Frame 57 1.png";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { PiHandDeposit } from "react-icons/pi";
@@ -16,7 +16,7 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { PiSignOutLight } from "react-icons/pi";
 import { GoHistory } from "react-icons/go";
 import { BiMoneyWithdraw } from "react-icons/bi";
-import tola from "../Assets/Group 2.png";
+import tola from "../assets/Group 2.png";
 
 const TopNav = () => {
   const location = useLocation();
@@ -181,7 +181,7 @@ const TopNav = () => {
                         Login
                       </Link>
                       <Link
-                        to="/register"
+                        to="/signup"
                         className="text-[17px] px-4 py-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         Register
@@ -200,7 +200,7 @@ const TopNav = () => {
                 Login
               </Link>
               <Link
-                to="/register"
+                to="/signup"
                 className="w-[94px] h-[45px] flex items-center justify-center rounded-[40px] text-[13px] text-white bg-gradient-to-r from-[#DE680A] to-[#FEC636] px-[23px] py-[13px] shadow-md"
               >
                 Register

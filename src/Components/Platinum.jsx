@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoHome, IoTrophy, IoGift, IoChevronForward, IoChevronBackOutline } from "react-icons/io5";
 import { ImSpades } from "react-icons/im";
 import Home from "./Home";
-import gif from "../Assets/gif.gif";
+import gif from "../assets/gif.gif";
 
 const Platinum = () => {
   const [open, setOpen] = useState(true);
